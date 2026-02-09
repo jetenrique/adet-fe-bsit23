@@ -1,0 +1,82 @@
+// Variables for Creative Freedom (Feel free to change these!)
+$primary-color: #4A90E2; 
+$header-bg: #2C3E50;
+$header-text: #ffffff;
+$card-bg: #f4f4f4;
+$text-color: #333;
+$danger-color: #e74c3c;
+
+// 1. Header Styles
+.app-header {
+  background-color: $header-bg;
+  color: $header-text;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+}
+
+// 2. Layout & Card Container
+main {
+  display: flex;
+  justify-content: center; // Centers the list horizontally
+  padding: 0 1rem;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column; // Creates the vertical list
+  gap: 20px; // Spacing between cards
+  width: 100%;
+  max-width: 600px; // Keeps cards from getting too wide
+}
+
+// 3. Card Styles
+.post-card {
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Pushes content up and button down
+
+  .card-title {
+    margin-top: 0;
+    color: $primary-color;
+    font-size: 1.4rem;
+  }
+
+  .card-description {
+    color: $text-color;
+    line-height: 1.5;
+  }
+
+  // 4. Button Alignment
+  .card-actions {
+    display: flex;
+    justify-content: flex-end; // Aligns button to the right
+    margin-top: 15px;
+
+    .delete-btn {
+      background-color: #fff;
+      border: 1px solid $danger-color;
+      color: $danger-color;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $danger-color;
+        color: white;
+      }
+    }
+  }
+}
