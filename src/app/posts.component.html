@@ -1,0 +1,26 @@
+
+<header class="app-header">
+  <h1>latest update</h1>
+</header>
+
+<main>
+  <div class="posts-container">
+    
+    <article class="post-card" *ngFor="let post of posts">
+      
+      <div class="card-content">
+        <h2 class="card-title">{{ post.title }}</h2>
+        
+        <p class="card-description">
+          {{ post.description }}
+        </p>
+      </div>
+
+      <div class="card-actions">
+        <button class="delete-btn" (click)="deletePost(post.id)">Delete</button>
+      </div>
+
+    </article>
+
+  </div>
+</main>
